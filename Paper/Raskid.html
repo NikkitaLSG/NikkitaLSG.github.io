@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="Css/RaskidStyle.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Smoke</title>
+    <style type="text/css">
+        head {
+            font-size: 120%;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<nav>
+
+    <div  class="search-container" id="Serch_button_top">
+        <input type="text" name="text" class="search" placeholder="Поиск по сайту!">
+        <input type="submit" name="submit" class="submit" value="Найти">
+    </div>
+
+    <div class="TopText">
+        <a class="active" href="main.html">Главная</a>
+        <a href="News.html">Новости</a>
+        <a href="Card.html">Карты</a>
+        <a href="Raskid.html">Раскид</a>
+        <a href="Acount.html">Аккаунт</a>
+
+        <button class="b" id="Serch_nav">Поиск</button>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function (){
+                const Serch_nav = document.getElementById("Serch_nav");
+                const Serch_button_top = document.getElementById("Serch_button_top");
+
+                Serch_nav.addEventListener("click", function (){
+                    if (Serch_button_top.style.display ==="none" || Serch_button_top.style.display ===""){
+                        Serch_button_top.style.display ="block";
+                    }
+                    else {
+                        Serch_button_top.style.display ="none";
+                    }
+                });
+            });
+
+        </script>
+    </div>
+</nav>
+<div class="HelloText">
+    <h1> Все карты доступные на РМ</h1>
+</div>
+
+<div class="gallery">
+    <div class="photo">
+        <img src="../Object/World/D17/D17.webp" alt="Photo1 description">
+        <p><a href="RaskidOnMap/D17.html"><b>д17</b></a></p>
+    </div>
+    <div class="photo">
+        <img src="../Object/World/Okraina/District.webp" alt="Photo2 description">
+        <p><a href="RaskidOnMap/Okraina.html"><b>Окраина</b></a></p>
+    </div>
+    <div class="photo">
+        <img src="../Object/World/Dworec/Palace.webp" alt="Photo3 description">
+        <p><a href="RaskidOnMap/Dworec.html"><b>Дворец</b></a></p>
+    </div>
+    <div class="photo">
+        <img src="../Object/World/PunkNaznachenia/Destination.webp" alt="Photo4 description">
+        <p><a href="RaskidOnMap/PunkNaznachenia.html"><b>Пункт назначения</b></a></p>
+    </div>
+    <div class="photo">
+        <img src="../Object/World/Mosti/e16518b611d61f637154a8db9adbff59ce04933ev2_hq.jpg" alt="Photo5 description">
+        <p><a href="RaskidOnMap/Mosti.html"><b>Мосты</b></a></p>
+    </div>
+    <div class="photo">
+        <img src="../Object/World/TrelernyiPark/Trailerpark.webp" alt="Photo6 description">
+        <p><a href="RaskidOnMap/TrilernyPark.html"><b>Трейлерный парк</b></a></p>
+    </div>
+    <div class="photo">
+        <img src="../Object/World/Rezedencia/Waterfalling.webp" alt="Photo7 description">
+        <p><a href="RaskidOnMap/Rezedencia.html"><b>Резеденция</b></a></p>
+    </div>
+    <div class="photo">
+        <img src="../Object/World/Villa/Hawkrock.webp" alt="Photo8 description">
+        <p><a href="RaskidOnMap/Villa.html"><b>Вилла</b></a></p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smoke</title>
+    <link rel="stylesheet" type="text/css" href="Css/AccountStyle.css">
+    <style type="text/css">
+        head {
+            font-size: 120%;
+            color: blue;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (){
+            const Serch_nav = document.getElementById("Serch_nav");
+            const Serch_button_top = document.getElementById("Serch_button_top");
+
+            Serch_nav.addEventListener("click", function (){
+                if (Serch_button_top.style.display ==="none" || Serch_button_top.style.display ===""){
+                    Serch_button_top.style.display ="block";
+                }
+                else {
+                    Serch_button_top.style.display ="none";
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function checkLogin() {
+            // Добавьте js код, который будет отправлять данные на сервер для проверки на совпадение логинов и имён пользователей в базе данных
+        }
+    </script>
+
+</head>
+<body>
+<nav>
+    <div class="search-container" id="Serch_button_top">
+        <input type="text" name="text" class="search" placeholder="Поиск по сайту!">
+        <input type="submit" name="submit" class="submit" value="Найти">
+    </div>
+
+    <div class="TopText">
+        <a class="active" href="main.html">Главная</a>
+        <a href="News.html">Новости</a>
+        <a href="Card.html">Карты</a>
+        <a href="Raskid.html">Раскид</a>
+        <a href="Acount.html">Аккаунт</a>
+
+        <button class="b" id="Serch_nav">Поиск</button>
+    </div>
+</nav>
+<div class="HelloText">
+    <h1> Регистрация/вход</h1>
+</div>
+<h2>Регистрация нового пользователя</h2>
+<form action="save.php" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username"><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password"><br>
+
+    <input type="submit" value="Log in">
+</form>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $xml = new SimpleXMLElement('User');
+    $xml ->addChild('username', $username);
+    $xml-> addChild('password', $password);
+    $xml -> asXML('user.xml');
+    echo -> "Your login information has been saved.";
+}
+?>
+</body>
+</html>

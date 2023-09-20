@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../Css/RaskidCSS/Villa.css">
+<meta charset="UTF-8">
+<title>Smoke</title>
+<style type="text/css">
+    head {
+        font-size: 120%;
+        color: blue;
+    }
+</style>
+</head>
+<body>
+<nav>
+
+    <div  class="search-container" id="Serch_button_top">
+        <input type="text" name="text" class="search" placeholder="Поиск по сайту!">
+        <input type="submit" name="submit" class="submit" value="Найти">
+    </div>
+
+    <div class="TopText">
+        <a class="active" href="../main.html">Главная</a>
+        <a href="../News.html">Новости</a>
+        <a href="../Card.html">Карты</a>
+        <a href="../Raskid.html">Раскид</a>
+        <a href="../Acount.html">Аккаунт</a>
+
+        <button class="b" id="Serch_nav">Поиск</button>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function (){
+                const Serch_nav = document.getElementById("Serch_nav");
+                const Serch_button_top = document.getElementById("Serch_button_top");
+
+                Serch_nav.addEventListener("click", function (){
+                    if (Serch_button_top.style.display ==="none" || Serch_button_top.style.display ===""){
+                        Serch_button_top.style.display ="block";
+                    }
+                    else {
+                        Serch_button_top.style.display ="none";
+                    }
+                });
+            });
+
+        </script>
+    </div>
+</nav>
+
+</body>
+</html>
